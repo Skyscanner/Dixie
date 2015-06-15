@@ -4,7 +4,7 @@ Dixie
 
 Dixie is an open source Objective-C testing framework for altering object behaviours. Test your app through creating chaos in the inner systems. The primary goal of Dixie is to provide a set of tools, which the developers can test their code with. Behind the goal is the ideology of _"do not always expect the best"_. You can read more about this [here](https://medium.com/@TeamDistinction/dixie-turning-chaos-to-your-advantage-b1ffd9bd5165).
 
-[![Build Status](https://magnum.travis-ci.com/Skyscanner/Dixie.svg?token=41fB74T7crVNV4xN8tz5&branch=master)](https://magnum.travis-ci.com/Skyscanner/Dixie)
+[![Build Status](https://travis-ci.org/Skyscanner/Dixie.svg)](https://travis-ci.org/Skyscanner/Dixie)
 
 
 ##Usage
