@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieBlockChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieBlockChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides a behaviour, where the original method&apos;s implementation can be replaced by a custom block</Abstract>
+			<DeclaredIn>DixieBlockChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieBlockChaosProvider/block:</TokenIdentifier>
+			<Abstract type="html">Creates an instance of DixieBlockChaosProvider</Abstract>
+			<DeclaredIn>DixieBlockChaosProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)block:(id)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The block, that should be called as the method&apos;s implementation</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a new instance of DixieBlockChaosProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/block:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieBlockChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieBlockChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

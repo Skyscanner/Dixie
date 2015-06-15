@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieMethodInfo.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieMethodInfo</TokenIdentifier>
+			<Abstract type="html">Describes a class and one of its method</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/setTargetClass:</TokenIdentifier>
+			<Abstract type="html">Owner of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) Class targetClass</Declaration>
+			
+			
+			<Anchor>//api/name/targetClass</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/targetClass</TokenIdentifier>
+			<Abstract type="html">Owner of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) Class targetClass</Declaration>
+			
+			
+			<Anchor>//api/name/targetClass</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieMethodInfo/targetClass</TokenIdentifier>
+			<Abstract type="html">Owner of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) Class targetClass</Declaration>
+			
+			
+			<Anchor>//api/name/targetClass</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/setSelector:</TokenIdentifier>
+			<Abstract type="html">Selector of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) SEL selector</Declaration>
+			
+			
+			<Anchor>//api/name/selector</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/selector</TokenIdentifier>
+			<Abstract type="html">Selector of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) SEL selector</Declaration>
+			
+			
+			<Anchor>//api/name/selector</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieMethodInfo/selector</TokenIdentifier>
+			<Abstract type="html">Selector of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) SEL selector</Declaration>
+			
+			
+			<Anchor>//api/name/selector</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/setMethodTypeEncoding:</TokenIdentifier>
+			<Abstract type="html">The string representation of the method encoding</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) const char *methodTypeEncoding</Declaration>
+			
+			
+			<Anchor>//api/name/methodTypeEncoding</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/methodTypeEncoding</TokenIdentifier>
+			<Abstract type="html">The string representation of the method encoding</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) const char *methodTypeEncoding</Declaration>
+			
+			
+			<Anchor>//api/name/methodTypeEncoding</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieMethodInfo/methodTypeEncoding</TokenIdentifier>
+			<Abstract type="html">The string representation of the method encoding</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) const char *methodTypeEncoding</Declaration>
+			
+			
+			<Anchor>//api/name/methodTypeEncoding</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/setIsClassMethod:</TokenIdentifier>
+			<Abstract type="html">Indicates whether the method is a class method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isClassMethod</Declaration>
+			
+			
+			<Anchor>//api/name/isClassMethod</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/isClassMethod</TokenIdentifier>
+			<Abstract type="html">Indicates whether the method is a class method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isClassMethod</Declaration>
+			
+			
+			<Anchor>//api/name/isClassMethod</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieMethodInfo/isClassMethod</TokenIdentifier>
+			<Abstract type="html">Indicates whether the method is a class method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) BOOL isClassMethod</Declaration>
+			
+			
+			<Anchor>//api/name/isClassMethod</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/setSignature:</TokenIdentifier>
+			<Abstract type="html">Signature of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSMethodSignature *signature</Declaration>
+			
+			
+			<Anchor>//api/name/signature</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieMethodInfo/signature</TokenIdentifier>
+			<Abstract type="html">Signature of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSMethodSignature *signature</Declaration>
+			
+			
+			<Anchor>//api/name/signature</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieMethodInfo/signature</TokenIdentifier>
+			<Abstract type="html">Signature of the method.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSMethodSignature *signature</Declaration>
+			
+			
+			<Anchor>//api/name/signature</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieMethodInfo/infoWithClass:selector:</TokenIdentifier>
+			<Abstract type="html">Creates a new MethodInfo instance.</Abstract>
+			<DeclaredIn>DixieMethodInfo.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)infoWithClass:(id)targetClass selector:(id)selector</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>targetClass</Name>
+					<Abstract type="html">The owner of the method.</Abstract>
+				</Parameter><Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">The selector of the method.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A MethodInfo instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/infoWithClass:selector:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

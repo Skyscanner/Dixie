@@ -1,0 +1,4 @@
+language: objective-c
+script:
+  - xctool -project Dixie/Dixie.xcodeproj -scheme Dixie -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool test -project Dixie/Dixie.xcodeproj -scheme DixieTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

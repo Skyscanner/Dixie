@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieSimpleLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieSimpleLogger</TokenIdentifier>
+			<Abstract type="html">Default subclass of DixieLogger,that uses NSLog</Abstract>
+			<DeclaredIn>DixieSimpleLogger.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieSimpleLogger/log:</TokenIdentifier>
+			<Abstract type="html">Logs a message.</Abstract>
+			<DeclaredIn>DixieSimpleLogger.m</DeclaredIn>
+			
+			<Declaration>- (void)log:(id)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format of the message. It can be followed by variadic arguments.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/log:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

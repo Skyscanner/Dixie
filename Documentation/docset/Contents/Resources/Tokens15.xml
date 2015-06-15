@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieNonChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieNonChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides the original behaviour</Abstract>
+			<DeclaredIn>DixieNonChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieNonChaosProvider/chaos</TokenIdentifier>
+			<Abstract type="html">Returns a new behaviour implementation</Abstract>
+			<DeclaredIn>DixieNonChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (IMP)chaos</Declaration>
+			
+			<ReturnValue><Abstract type="html">An implementation pointer</Abstract></ReturnValue>
+			<Anchor>//api/name/chaos</Anchor>
+            <NodeRef refid="15"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

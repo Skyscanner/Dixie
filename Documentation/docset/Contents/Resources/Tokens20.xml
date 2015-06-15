@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieSequentialChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieSequentialChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides a behaviour, where the method&apos;s implementation behaves differently for a new call. The different behaviours depend on the defined different DixieChaosProviders of the class</Abstract>
+			<DeclaredIn>DixieSequentialChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="20"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieSequentialChaosProvider/sequence:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieSequentialChaosProvider</Abstract>
+			<DeclaredIn>DixieSequentialChaosProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)sequence:(id)sequenceOfChaosProviders</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>sequenceOfChaosProviders</Name>
+					<Abstract type="html">Array of DixieBaseChaosProvider, the order of the array defines, how the method&apos;s implementation will behave for a new call.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieSequentialChaosProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/sequence:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieSequentialChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieSequentialChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

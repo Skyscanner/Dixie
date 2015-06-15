@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/DixiePuppetMaking.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/DixiePuppetMaking</TokenIdentifier>
+			<Abstract type="html">Interface to objects, that can change the behaviour of a class&apos; method.</Abstract>
+			<DeclaredIn>DixiePuppetMaking.h</DeclaredIn>
+            
+			
+			<NodeRef refid="23"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DixiePuppetMaking/createPuppet:seed:</TokenIdentifier>
+			<Abstract type="html">Creates puppet according to a given entry for the specified seed, by replacing the original behaviour with a new</Abstract>
+			<DeclaredIn>DixiePuppetMaking.h</DeclaredIn>
+			
+			<Declaration>- (void)createPuppet:(id)entry seed:(id)seed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entry</Name>
+					<Abstract type="html">The entry specifying the victim class, selector and behaviour</Abstract>
+				</Parameter><Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">An integer value to make the invocations on the puppets deterministic</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createPuppet:seed:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/DixiePuppetMaking/dismissPuppet:</TokenIdentifier>
+			<Abstract type="html">Dismisses the puppets for a given entry</Abstract>
+			<DeclaredIn>DixiePuppetMaking.h</DeclaredIn>
+			
+			<Declaration>- (void)dismissPuppet:(id)entry</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entry</Name>
+					<Abstract type="html">The entry specifying the victim class, selector and behaviour</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/dismissPuppet:</Anchor>
+            <NodeRef refid="23"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieCallEnvironment.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieCallEnvironment</TokenIdentifier>
+			<Abstract type="html">Describes the environment of a method&apos;s implementation</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCallEnvironment/setArguments:</TokenIdentifier>
+			<Abstract type="html">Arguments of the method call converted into objects</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSArray *arguments</Declaration>
+			
+			
+			<Anchor>//api/name/arguments</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCallEnvironment/arguments</TokenIdentifier>
+			<Abstract type="html">Arguments of the method call converted into objects</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSArray *arguments</Declaration>
+			
+			
+			<Anchor>//api/name/arguments</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieCallEnvironment/arguments</TokenIdentifier>
+			<Abstract type="html">Arguments of the method call converted into objects</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (strong) NSArray *arguments</Declaration>
+			
+			
+			<Anchor>//api/name/arguments</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCallEnvironment/setReturnValue:</TokenIdentifier>
+			<Abstract type="html">The return value of a method&apos;s implementation</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) id returnValue</Declaration>
+			
+			
+			<Anchor>//api/name/returnValue</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCallEnvironment/returnValue</TokenIdentifier>
+			<Abstract type="html">The return value of a method&apos;s implementation</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) id returnValue</Declaration>
+			
+			
+			<Anchor>//api/name/returnValue</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieCallEnvironment/returnValue</TokenIdentifier>
+			<Abstract type="html">The return value of a method&apos;s implementation</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic) id returnValue</Declaration>
+			
+			
+			<Anchor>//api/name/returnValue</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCallEnvironment/initWithArguments:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieCallEnvironment with the arguments</Abstract>
+			<DeclaredIn>DixieCallEnvironment.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithArguments:(id)arguments</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>arguments</Name>
+					<Abstract type="html">Arguments of the method call converted into objects</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieCallEnvironment</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithArguments:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

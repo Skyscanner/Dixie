@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieRandomParamProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieRandomParamProvider</TokenIdentifier>
+			<Abstract type="html">Provides a random number object</Abstract>
+			<DeclaredIn>DixieRandomParamProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRandomParamProvider/providerWithUpperBound:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieRandomParamProvider with a given uppper bound</Abstract>
+			<DeclaredIn>DixieRandomParamProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)providerWithUpperBound:(id)upperBound</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>upperBound</Name>
+					<Abstract type="html">The upper limit to the random numbers, the numbers can be only lower than this</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieRandomParamProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/providerWithUpperBound:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieRandomParamProvider/setSeed:</TokenIdentifier>
+			<Abstract type="html">Set the seed for the random generator</Abstract>
+			<DeclaredIn>DixieRandomParamProvider.h</DeclaredIn>
+			
+			<Declaration>- (void)setSeed:(id)seed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">A seed for deterministic behaviour</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setSeed:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieRandomParamProvider/parameter</TokenIdentifier>
+			<Abstract type="html">Returns an object</Abstract>
+			<DeclaredIn>DixieRandomParamProvider.m</DeclaredIn>
+			
+			<Declaration>- (id)parameter</Declaration>
+			
+			<ReturnValue><Abstract type="html">an object</Abstract></ReturnValue>
+			<Anchor>//api/name/parameter</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

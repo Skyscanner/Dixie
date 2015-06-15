@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/peterwiesner/Library/Developer/Shared/Documentation/DocSets/com.skyscanner.dixie.Dixie.docset
+Time: 2015-06-01 17:00:00 +0000

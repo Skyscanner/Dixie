@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieRunTimeHelper.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieRunTimeHelper</TokenIdentifier>
+			<Abstract type="html">Helper to generate behaviour implementation, transparently call implementations and provide Runtime informations</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+            
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/implementationWithChaosContext:environment:</TokenIdentifier>
+			<Abstract type="html">Generates an implementation pointer that confirms to the chaosContext and block</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (IMP)implementationWithChaosContext:(id)chaosContext environment:(id)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>chaosContext</Name>
+					<Abstract type="html">The context of the implementation</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">Block for the body of the implementation pointer</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the implementation pointer</Abstract></ReturnValue>
+			<Anchor>//api/name/implementationWithChaosContext:environment:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/callImplementation:on:chaosContext:environment:</TokenIdentifier>
+			<Abstract type="html">Calls the implementation pointer</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (void)callImplementation:(id)implementation on:(id)puppet chaosContext:(id)chaosContext environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>implementation</Name>
+					<Abstract type="html">The IMP pointer to call</Abstract>
+				</Parameter><Parameter>
+					<Name>puppet</Name>
+					<Abstract type="html">The receiver of the ObjC message</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosContext</Name>
+					<Abstract type="html">The context of the behaviour</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">The environment of the method&apos;s implementation call</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/callImplementation:on:chaosContext:environment:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/selectorsForClass:</TokenIdentifier>
+			<Abstract type="html">Collects the runtime public methodnames for a given class</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)selectorsForClass:(id)targetClass</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>targetClass</Name>
+					<Abstract type="html">The class</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Array of public selector strings</Abstract></ReturnValue>
+			<Anchor>//api/name/selectorsForClass:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/methodForMethodInfo:</TokenIdentifier>
+			<Abstract type="html">Returns the Method pointer for a given MethodInfo object</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (Method)methodForMethodInfo:(id)methodInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>methodInfo</Name>
+					<Abstract type="html">Describes the target class and it&apos;s method</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The Method pointer</Abstract></ReturnValue>
+			<Anchor>//api/name/methodForMethodInfo:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/methodTypeEncodingForMethodInfo:</TokenIdentifier>
+			<Abstract type="html">Returns the string representation of the method encoding describes by the MethodInfo object</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (const char *)methodTypeEncodingForMethodInfo:(id)methodInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>methodInfo</Name>
+					<Abstract type="html">Describes the target class and it&apos;s method</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the string representation of the method encoding</Abstract></ReturnValue>
+			<Anchor>//api/name/methodTypeEncodingForMethodInfo:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/classForMethodInfo:</TokenIdentifier>
+			<Abstract type="html">Returns the class for the method described in the MethodInfo.</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.h</DeclaredIn>
+			
+			<Declaration>+ (Class)classForMethodInfo:(id)methodInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>methodInfo</Name>
+					<Abstract type="html">Describes the target class and it&apos;s method</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A Class object for instance methods and meta class object for class methods</Abstract></ReturnValue>
+			<Anchor>//api/name/classForMethodInfo:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/blockForSignature:block:</TokenIdentifier>
+			<Abstract type="html">Returns a block implementation for a given signature</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.m</DeclaredIn>
+			
+			<Declaration>+ (id)blockForSignature:(id)signature block:(id)block</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>signature</Name>
+					<Abstract type="html">The method signature</Abstract>
+				</Parameter><Parameter>
+					<Name>block</Name>
+					<Abstract type="html">The body of the block implementation</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A block, that matches the signature and calls the block</Abstract></ReturnValue>
+			<Anchor>//api/name/blockForSignature:block:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/argumentsFor:originalArguments:</TokenIdentifier>
+			<Abstract type="html">*  Parses a variadic list into array of objects</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.m</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)argumentsFor:(id)signature originalArguments:(id)arguments</Declaration>
+			
+			
+			<Anchor>//api/name/argumentsFor:originalArguments:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRunTimeHelper/objectFromNext:type:</TokenIdentifier>
+			<Abstract type="html">Converts the next item in the variadic arguments list into subclass of NSObjects</Abstract>
+			<DeclaredIn>DixieRunTimeHelper.m</DeclaredIn>
+			
+			<Declaration>+ (id)objectFromNext:(id)arguments type:(id)argType</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>arguments</Name>
+					<Abstract type="html">The variadic list</Abstract>
+				</Parameter><Parameter>
+					<Name>argType</Name>
+					<Abstract type="html">the expected type of the next item</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">An NSObject subclass that represents the argument</Abstract></ReturnValue>
+			<Anchor>//api/name/objectFromNext:type:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

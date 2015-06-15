@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieCompositeChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieCompositeChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides a behaviour, where the method&apos;s implementation can be changed according the passed arguments</Abstract>
+			<DeclaredIn>DixieCompositeChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieCompositeChaosProvider/conditions:</TokenIdentifier>
+			<Abstract type="html">Creates a new instance of DixieCompositeChaosProvider</Abstract>
+			<DeclaredIn>DixieCompositeChaosProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)conditions:(id)arrayOfConditions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>arrayOfConditions</Name>
+					<Abstract type="html">an array of DixieCompositeConditions</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a new instance of DixieCompositeChaosProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/conditions:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieCompositeChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

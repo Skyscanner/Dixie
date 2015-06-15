@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieConstantChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieConstantChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides a behaviour, where a given constant will be returned from the method&apos;s implementation</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieConstantChaosProvider/setConstant:</TokenIdentifier>
+			<Abstract type="html">The constant value to return</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id constant</Declaration>
+			
+			
+			<Anchor>//api/name/constant</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieConstantChaosProvider/constant</TokenIdentifier>
+			<Abstract type="html">The constant value to return</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id constant</Declaration>
+			
+			
+			<Anchor>//api/name/constant</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieConstantChaosProvider/constant</TokenIdentifier>
+			<Abstract type="html">The constant value to return</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id constant</Declaration>
+			
+			
+			<Anchor>//api/name/constant</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieConstantChaosProvider/constant:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieConstantChaosProvider</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)constant:(id)constant</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>constant</Name>
+					<Abstract type="html">The value the DixieConstantChaosProvider will return</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieConstantChaosProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/constant:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieConstantChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieConstantChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

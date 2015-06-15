@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieBaseChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieBaseChaosProvider</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DixieBaseChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieBaseChaosProvider/chaos</TokenIdentifier>
+			<Abstract type="html">Returns a new behaviour implementation</Abstract>
+			<DeclaredIn>DixieBaseChaosProvider.h</DeclaredIn>
+			
+			<Declaration>- (IMP)chaos</Declaration>
+			
+			<ReturnValue><Abstract type="html">An implementation pointer</Abstract></ReturnValue>
+			<Anchor>//api/name/chaos</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieBaseChaosProvider/forwardChaosOf:environment:to:</TokenIdentifier>
+			<Abstract type="html">Will forward the result of one DixieChaosProvider to the next.</Abstract>
+			<DeclaredIn>DixieBaseChaosProvider.h</DeclaredIn>
+			
+			<Declaration>- (void)forwardChaosOf:(id)victim environment:(id)environment to:(id)chaosProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosProvider</Name>
+					<Abstract type="html">The target DixieBaseChaosProvider, who should provider the behaviour</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/forwardChaosOf:environment:to:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieBaseChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieBaseChaosProvider.h</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

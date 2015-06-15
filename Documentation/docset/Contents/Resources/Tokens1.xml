@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/Dixie.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/Dixie</TokenIdentifier>
+			<Abstract type="html">Represents a Dixie configuration.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/puppetMaker:</TokenIdentifier>
+			<Abstract type="html">Sets the default puppetmaker</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)puppetMaker:(id)puppetMaker</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>puppetMaker</Name>
+					<Abstract type="html">An object that conforms to the PuppetMaking protocol.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The active Dixie object</Abstract></ReturnValue>
+			<Anchor>//api/name/puppetMaker:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/profile:</TokenIdentifier>
+			<Abstract type="html">Registers a single profiles.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)profile:(id)profile</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>profile</Name>
+					<Abstract type="html">A DixieProfileEntry objects.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Same Dixie object.</Abstract></ReturnValue>
+			<Anchor>//api/name/profile:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/profiles:</TokenIdentifier>
+			<Abstract type="html">Registers profiles.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)profiles:(id)arrayOfEntries</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>arrayOfEntries</Name>
+					<Abstract type="html">Collection of DixieProfileEntry objects.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Same Dixie object.</Abstract></ReturnValue>
+			<Anchor>//api/name/profiles:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/apply</TokenIdentifier>
+			<Abstract type="html">Applies the Dixie configuration.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (void)apply</Declaration>
+			
+			
+			<Anchor>//api/name/apply</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/apply:</TokenIdentifier>
+			<Abstract type="html">Applies the Dixie configuration with the specified seed (used for random generation).</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (void)apply:(id)seed</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">The seed for random generation</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/apply:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/revert</TokenIdentifier>
+			<Abstract type="html">Reverts the Dixie configuration.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (void)revert</Declaration>
+			
+			
+			<Anchor>//api/name/revert</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/Dixie/revert:</TokenIdentifier>
+			<Abstract type="html">Reverts one DixieProfileEntry from the Dixie configuration.</Abstract>
+			<DeclaredIn>Dixie.h</DeclaredIn>
+			
+			<Declaration>- (void)revert:(id)entry</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>entry</Name>
+					<Abstract type="html">The profile to revert</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/revert:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

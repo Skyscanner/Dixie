@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieCompositeCondition.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieCompositeCondition</TokenIdentifier>
+			<Abstract type="html">Describes which chaosProvider should define the method&apos;s behaviour if the argument at index, matches the given value. DixieCompositeChaosProvider uses this object to delegate the implementation to different providers.</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/setIndex:</TokenIdentifier>
+			<Abstract type="html">The index of the argument to check</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/index</TokenIdentifier>
+			<Abstract type="html">The index of the argument to check</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieCompositeCondition/index</TokenIdentifier>
+			<Abstract type="html">The index of the argument to check</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger index</Declaration>
+			
+			
+			<Anchor>//api/name/index</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/setValue:</TokenIdentifier>
+			<Abstract type="html">The value of the argument we wish to compare</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/value</TokenIdentifier>
+			<Abstract type="html">The value of the argument we wish to compare</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieCompositeCondition/value</TokenIdentifier>
+			<Abstract type="html">The value of the argument we wish to compare</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) id value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/setChaosProvider:</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider to apply</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieCompositeCondition/chaosProvider</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider to apply</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieCompositeCondition/chaosProvider</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider to apply</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieCompositeCondition/condition:value:chaosProvider:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieCompositeCondition</Abstract>
+			<DeclaredIn>DixieCompositeCondition.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)condition:(id)index value:(id)value chaosProvider:(id)chaosProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">The index of the argument to check</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value to compare the argument against</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosProvider</Name>
+					<Abstract type="html">The DixieChaosProvider to apply, if the argument matches the value</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieCompositeCondition</Abstract></ReturnValue>
+			<Anchor>//api/name/condition:value:chaosProvider:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

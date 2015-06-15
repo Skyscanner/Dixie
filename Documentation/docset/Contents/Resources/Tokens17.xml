@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieRandomChaosProvider.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieRandomChaosProvider</TokenIdentifier>
+			<Abstract type="html">Provides a behaviour, where the method&apos;s implementation returns a random object, generated with a DixieRandomParamProvider</Abstract>
+			<DeclaredIn>DixieRandomChaosProvider.h</DeclaredIn>
+            
+			
+			<NodeRef refid="17"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieRandomChaosProvider/randomProvider:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieRandomChaosProvider</Abstract>
+			<DeclaredIn>DixieRandomChaosProvider.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)randomProvider:(id)paramProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>paramProvider</Name>
+					<Abstract type="html">The DixieRandomParamProvider to use as the random object generator</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a DixieRandomChaosProvider</Abstract></ReturnValue>
+			<Anchor>//api/name/randomProvider:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieRandomChaosProvider/chaosImplementationFor:environment:</TokenIdentifier>
+			<Abstract type="html">The behaviour implementation</Abstract>
+			<DeclaredIn>DixieRandomChaosProvider.m</DeclaredIn>
+			
+			<Declaration>- (void)chaosImplementationFor:(id)victim environment:(id)environment</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The class or instance of the class, that&apos;s method should be changed</Abstract>
+				</Parameter><Parameter>
+					<Name>environment</Name>
+					<Abstract type="html">A DixieCallEnvironment, that describes the arguments and return value</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/chaosImplementationFor:environment:</Anchor>
+            <NodeRef refid="17"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

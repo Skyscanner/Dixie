@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieChaosContext.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieChaosContext</TokenIdentifier>
+			<Abstract type="html">Defining the context for the DixieChaosProviders</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/setSeed:</TokenIdentifier>
+			<Abstract type="html">A seed for deterministic behaviour.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger seed</Declaration>
+			
+			
+			<Anchor>//api/name/seed</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/seed</TokenIdentifier>
+			<Abstract type="html">A seed for deterministic behaviour.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger seed</Declaration>
+			
+			
+			<Anchor>//api/name/seed</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieChaosContext/seed</TokenIdentifier>
+			<Abstract type="html">A seed for deterministic behaviour.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSInteger seed</Declaration>
+			
+			
+			<Anchor>//api/name/seed</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/setMethodInfo:</TokenIdentifier>
+			<Abstract type="html">A DixieMethodInfo, that describes the class and one of its method</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/methodInfo</TokenIdentifier>
+			<Abstract type="html">A DixieMethodInfo, that describes the class and one of its method</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieChaosContext/methodInfo</TokenIdentifier>
+			<Abstract type="html">A DixieMethodInfo, that describes the class and one of its method</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/setOriginalIMP:</TokenIdentifier>
+			<Abstract type="html">The original implementation of the class method, described in the methodInfo property.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property IMP originalIMP</Declaration>
+			
+			
+			<Anchor>//api/name/originalIMP</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/originalIMP</TokenIdentifier>
+			<Abstract type="html">The original implementation of the class method, described in the methodInfo property.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property IMP originalIMP</Declaration>
+			
+			
+			<Anchor>//api/name/originalIMP</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieChaosContext/originalIMP</TokenIdentifier>
+			<Abstract type="html">The original implementation of the class method, described in the methodInfo property.</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>@property IMP originalIMP</Declaration>
+			
+			
+			<Anchor>//api/name/originalIMP</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieChaosContext/init:methodInfo:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieChaosContext with a given seed and methodInfo</Abstract>
+			<DeclaredIn>DixieChaosContext.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)init:(id)seed methodInfo:(id)methodInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>seed</Name>
+					<Abstract type="html">A seed for deterministic behaviour.</Abstract>
+				</Parameter><Parameter>
+					<Name>methodInfo</Name>
+					<Abstract type="html">A DixieMethodInfo, that describes the class and one of its method</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">A DixieChaosContext</Abstract></ReturnValue>
+			<Anchor>//api/name/init:methodInfo:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

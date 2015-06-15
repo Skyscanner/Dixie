@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieProfileEntry.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieProfileEntry</TokenIdentifier>
+			<Abstract type="html">Describe the target class, selector and the desired behaviour</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/setEntryID:</TokenIdentifier>
+			<Abstract type="html">Uniquely identifies the entry</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSString *entryID</Declaration>
+			
+			
+			<Anchor>//api/name/entryID</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/entryID</TokenIdentifier>
+			<Abstract type="html">Uniquely identifies the entry</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSString *entryID</Declaration>
+			
+			
+			<Anchor>//api/name/entryID</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieProfileEntry/entryID</TokenIdentifier>
+			<Abstract type="html">Uniquely identifies the entry</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (readonly) NSString *entryID</Declaration>
+			
+			
+			<Anchor>//api/name/entryID</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/setMethodInfo:</TokenIdentifier>
+			<Abstract type="html">The DixieMethodInfo object, that describes the class and its method</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/methodInfo</TokenIdentifier>
+			<Abstract type="html">The DixieMethodInfo object, that describes the class and its method</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieProfileEntry/methodInfo</TokenIdentifier>
+			<Abstract type="html">The DixieMethodInfo object, that describes the class and its method</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, readonly) DixieMethodInfo *methodInfo</Declaration>
+			
+			
+			<Anchor>//api/name/methodInfo</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/setChaosProvider:</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieProfileEntry/chaosProvider</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/DixieProfileEntry/chaosProvider</TokenIdentifier>
+			<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) DixieBaseChaosProvider *chaosProvider</Declaration>
+			
+			
+			<Anchor>//api/name/chaosProvider</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieProfileEntry/entry:selector:chaosProvider:</TokenIdentifier>
+			<Abstract type="html">Creates a DixieProfileEntry with the main properties set</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)entry:(id)victim selector:(id)selector chaosProvider:(id)chaosProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The victim whose method we wish to override</Abstract>
+				</Parameter><Parameter>
+					<Name>selector</Name>
+					<Abstract type="html">The selector for the method we wish to override</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosProvider</Name>
+					<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">a new DixieProfileEntry with the properties set</Abstract></ReturnValue>
+			<Anchor>//api/name/entry:selector:chaosProvider:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieProfileEntry/entries:excludeSelectorsOfClass:chaosProvider:</TokenIdentifier>
+			<Abstract type="html">Creates an array of DixieProfileEntry.
+The DixieProfileEntry array consists of all selectors on the victim EXCEPT those defined in the klass</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)entries:(id)victim excludeSelectorsOfClass:(id)excludeClass chaosProvider:(id)chaosProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The victim whose method we wish to override</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosProvider</Name>
+					<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+				</Parameter><Parameter>
+					<Name>klass</Name>
+					<Abstract type="html">Tha class, whose selectors should not be added to the list of entries</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an array of DixieProfileEntries representing all available selectors on the victim EXCEPT those defined in the excludeClass</Abstract></ReturnValue>
+			<Anchor>//api/name/entries:excludeSelectorsOfClass:chaosProvider:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieProfileEntry/entries:excludes:chaosProvider:</TokenIdentifier>
+			<Abstract type="html">Creates an array of DixieProfileEntries
+The DixieProfileEntries array consists of all selectors on the victim EXCEPT those specified in excludedSelectorNames</Abstract>
+			<DeclaredIn>DixieProfileEntry.h</DeclaredIn>
+			
+			<Declaration>+ (NSArray *)entries:(id)victim excludes:(id)excludedSelectorNames chaosProvider:(id)chaosProvider</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>victim</Name>
+					<Abstract type="html">The victim whose method we wish to override</Abstract>
+				</Parameter><Parameter>
+					<Name>excludedSelectorNames</Name>
+					<Abstract type="html">The selectors we do NOT wish to include in the return calue</Abstract>
+				</Parameter><Parameter>
+					<Name>chaosProvider</Name>
+					<Abstract type="html">The ChaosProvider which will provide the new implementation</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">an array of DixieProfileEntries representing all available selectors on the victim EXCEPT those specified</Abstract></ReturnValue>
+			<Anchor>//api/name/entries:excludes:chaosProvider:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

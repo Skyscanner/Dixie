@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DixieLogger.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DixieLogger</TokenIdentifier>
+			<Abstract type="html">Base class for logging</Abstract>
+			<DeclaredIn>DixieLogger.h</DeclaredIn>
+            
+			
+			<NodeRef refid="12"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieLogger/defaultLogger</TokenIdentifier>
+			<Abstract type="html">Returns default logger.</Abstract>
+			<DeclaredIn>DixieLogger.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)defaultLogger</Declaration>
+			
+			<ReturnValue><Abstract type="html">The logger.</Abstract></ReturnValue>
+			<Anchor>//api/name/defaultLogger</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/DixieLogger/setDefaultLogger:</TokenIdentifier>
+			<Abstract type="html">Changes the default logger.</Abstract>
+			<DeclaredIn>DixieLogger.h</DeclaredIn>
+			
+			<Declaration>+ (void)setDefaultLogger:(id)logger</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>logger</Name>
+					<Abstract type="html">The logger.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDefaultLogger:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DixieLogger/log:</TokenIdentifier>
+			<Abstract type="html">Logs a message.</Abstract>
+			<DeclaredIn>DixieLogger.h</DeclaredIn>
+			
+			<Declaration>- (void)log:(id)format, ...</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>format</Name>
+					<Abstract type="html">The format of the message. It can be followed by variadic arguments.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/log:</Anchor>
+            <NodeRef refid="12"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
