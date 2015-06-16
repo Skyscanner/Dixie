@@ -76,7 +76,7 @@ Provides a behaviour that returns a random object. The default implementation re
 ####DixieExceptionChaosProvider
 Provides a behaviour that throws an exception.
 
-####DixieSequencialChaosProvider
+####DixieSequentialChaosProvider
 For every call it returns the _ith_ chaosprovider's behaviour, where `i` is the number of the call. If the number of calls exceeds the number of predefined chaosprovider the last provider's behaviour will be used.
 
 ####DixieCompositeChaosProvider
