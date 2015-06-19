@@ -6,6 +6,27 @@ Dixie is an open source Objective-C testing framework for altering object behavi
 
 [![Build Status](https://travis-ci.org/Skyscanner/Dixie.svg)](https://travis-ci.org/Skyscanner/Dixie)
 
+##Installation
+[CocoaPods](https://cocoapods.org) is the recommended way to add Dixie to your project.
+
+- Add Dixie to your Podfile
+
+	`pod 'Dixie'`
+- Install/update pod(s)
+
+	`pod install`
+
+- Include DixieHeaders.h where you would like to use Dixie
+
+	`#import <DixieHeaders.h>`
+
+##Non-CocoaPods Installation
+You can add Dixie without CocoaPods to your project if you download the Dixie project and add it manually to your project. Don't forget to add the project path into the Header Search Path.
+
+You can see an example for this integration in the [Example app](https://github.com/Skyscanner/Dixie#example-app)
+
+
+
 
 ##Usage
 First define which method on which class the change should be applied to, and its new behaviour. You can do this by creating a `DixieProfileEntry`:
