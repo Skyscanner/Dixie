@@ -32,51 +32,59 @@ You can see an example for this integration in the [Example app](https://github.
 ##Usage
 First define which method on which class the change should be applied to, and its new behaviour. You can do this by creating a `DixieProfileEntry`:
 
-	//Tomorrow
-	NSDate* testDate = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
-	
-	//A behaviour to always return tomorrow's date
-	DixieChaosProvider* provider = [DixieConstantChaosProvider constant:testDate];
-	
-	//Create the entry
-	DixieProfileEntry* entry = [DixieProfileEntry entry:[NSDate class] selector:@selector(date) chaosProvider:provider]
+```objective-c
+//Tomorrow
+NSDate* testDate = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
+
+//A behaviour to always return tomorrow's date
+DixieChaosProvider* provider = [DixieConstantChaosProvider constant:testDate];
+
+//Create the entry
+DixieProfileEntry* entry = [DixieProfileEntry entry:[NSDate class] selector:@selector(date) chaosProvider:provider]
+```
 	
 Then create an instance of a `Dixie` configuration, set the profile and apply.
 
-	//Create Dixie configuration
-	Dixie* dixie = [Dixie new];
+```objective-c
+//Create Dixie configuration
+Dixie* dixie = [Dixie new];
 	
-	//Set and apply change
-	dixie
-		.Profile(entry)
-		.Apply();
+//Set and apply change
+dixie
+	.Profile(entry)
+	.Apply();
+```
 
 After applying the profile, every call of `[NSDate date]` will return the date for tomorrow instead of today. This way you can test date issues without going to the device settings and changing the date manually.
 
 When you no longer need Dixie, revert your change:
 
-	//Revert the change of the entry
-	dixie
-		.RevertIt(entry);
+```objective-c
+//Revert the change of the entry
+dixie
+	.RevertIt(entry);
+```
 
 Full code:
 
-	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-	{
-		NSDate* testDate = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
+```objective-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	NSDate* testDate = [NSDate dateWithTimeIntervalSinceNow:24*60*60];
+
+	DixieChaosProvider* provider = [DixieConstantChaosProvider constant:testDate];
 	
-		DixieChaosProvider* provider = [DixieConstantChaosProvider constant:testDate];
-	
-		DixieProfileEntry* entry = [DixieProfileEntry entry:[NSDate class] selector:@selector(date) chaosProvider:provider]
+	DixieProfileEntry* entry = [DixieProfileEntry entry:[NSDate class] selector:@selector(date) chaosProvider:provider]
 		
-		Dixie* dixie = [Dixie new];
+	Dixie* dixie = [Dixie new];
+
+	dixie
+		.Profile(entry)
+		.Apply();
 	
-		dixie
-			.Profile(entry)
-			.Apply();
-		
-		return YES;	
-	}
+	return YES;	
+}
+```
 
 You can set multiple profiles and also revert them all at once. You can also choose from some preset behaviours:
 
