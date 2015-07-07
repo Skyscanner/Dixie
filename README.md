@@ -10,7 +10,6 @@ Dixie is an open source Objective-C testing framework for altering object behavi
 1. Create a new target in your app’s project that runs your Dixie setup logic during app launch. With the separate target you can make sure all Dixie related code is separated and won’t be included in your production builds
 2. Change the behaviour of some components with Dixie and deploy the test build to device or simulator to see how your app behaves
 3. Once you got familiar with the library, it might be worth to create a list of behaviour changes that you can easily configure and combine from your debug build
-4. You can change the behaviour of basically anything you can think of, but here are a few ideas how you could utilise Dixie:
 
 ### A few ideas what you can do
 * Hijack the localisation component of your app to simulate long strings or other unexpected text
