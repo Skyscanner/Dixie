@@ -2,11 +2,32 @@ Dixie
 ===
 <img src="/Logo.png?raw=true" alt="Dixie" width="100px" height="auto">
 
-Dixie is an open source Objective-C testing framework for altering object behaviours. Test your app through creating chaos in the inner systems. The primary goal of Dixie is to provide a set of tools, which the developers can test their code with. Behind the goal is the ideology of _"do not always expect the best"_. You can read more about this [here](https://medium.com/@TeamDistinction/dixie-turning-chaos-to-your-advantage-b1ffd9bd5165).
+Dixie is an open source Objective-C testing framework for altering object behaviours. Test your app through creating chaos in the inner systems. The primary goal of Dixie is to provide a set of tools, which the developers can test their code with. Behind the goal is the ideology of _"do not always expect the best"_. You can read more about this [here](https://medium.com/@Skyscanner/dixie-turning-chaos-to-your-advantage-4f3749e6d485).
 
 [![Build Status](https://travis-ci.org/Skyscanner/Dixie.svg)](https://travis-ci.org/Skyscanner/Dixie)
 
-##Installation
+### How can you test your application with Dixie
+1. Create a new target in your app’s project that runs your Dixie setup logic during app launch. With the separate target you can make sure all Dixie related code is separated and won’t be included in your production builds
+2. Change the behaviour of some components with Dixie and deploy the test build to device or simulator to see how your app behaves
+3. Once you got familiar with the library, it might be worth to create a list of behaviour changes that you can easily configure and combine from your debug build
+
+### A few ideas what you can do
+* Hijack the localisation component of your app to simulate long strings or other unexpected text
+* Inject mocked network responses into the network layer (you can match the URLs with a regular expression so you can provide different responses for different requests)
+* Network mocking can also be utilised in automated UI tests, so you don’t have to rely on real network communication
+* You can easily mock GPS coordinates or even the current date, so you do not have to set the simulators location manually
+* Inject randomised properties to your data models to see how robust is your application handling the objects received from web
+
+### In our projects we use Dixie in two ways
+
+1. We just put the Dixie configuration code in the `AppDelegate` and remove if not needed (these are short testing sessions). `#ifdef`-ing is an option, also creating a separate target that has a category on the `AppDelegate`.
+2. We use Dixie in the automated UI tests as a standard mocking framework. The tests rely on the final app target, and we found extremely hard to mock components on the low level (e.g. networking) in this scope.
+
+Either way we think Dixie comes handy in cases, where you have to mock libraries, that's less configurable or some components are not that easily injectable.
+
+
+
+## Installation
 #### With CocoaPods
 [CocoaPods](https://cocoapods.org) is the recommended way to add Dixie to your project.
 
@@ -112,9 +133,8 @@ For every call it returns the _ith_ chaosprovider's behaviour, where `i` is the 
 ####DixieCompositeChaosProvider
 Checks the parameters of the method and if one matches the value of a given `DixieCompositeCondition`, then it returns the connected chaosprovider's behaviour.
 
-
 # Under the hood
-The idea of changing an object's behaviour is not new, it is called mocking. It is usually used in unit testing, where a component's dependencies are mocked to have a controlled, reproducible environment. In these situations there is the requirement that the target project should be _easily injectable_. If you are depending on components that are not made by you, or that are not injectable, you have to turn to different methods. To implement the theory of creating chaos/altering component behaviour in Objective-C environment, Dixie uses the technique of _Method Swizzling_. Method swizzling relies on calling special runtime methods, that require knowing the target method and its environment. Dixie takes care of handling the runtime for you, and also hides the original method environment, so you only have to focus on defining the new behaviour and can apply it quickly and simply.
+The idea of changing an object's behaviour is not new. It is usually used in unit testing, where a component's dependencies are mocked to have a controlled, reproducible environment. In these situations there is the requirement that the target project should be _easily injectable_. If you are depending on components that are not made by you, or that are not injectable, you have to turn to different methods. To implement the theory of creating chaos/altering component behaviour in Objective-C environment, Dixie uses the technique of _Method Swizzling_. Method swizzling relies on calling special runtime methods, that require knowing the target method and its environment. Dixie takes care of handling the runtime for you, and also hides the original method environment, so you only have to focus on defining the new behaviour and can apply it quickly and simply.
 
 __Note:__ 
 * The current implementation is best at changing behaviours of methods that are expecting object as parameters and that either return `void` or object. Support for primitive types will come in the next version.
