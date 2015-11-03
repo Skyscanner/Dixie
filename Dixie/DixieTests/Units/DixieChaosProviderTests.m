@@ -15,6 +15,7 @@
 
 #import "DixieHeaders.h"
 #import "ChaosProviderTestClass.h"
+#import "NSObject+DixieRunTimeHelper.h"
 
 @interface DixieChaosProviderTests : XCTestCase
 {
@@ -120,7 +121,7 @@
         
         NSNumber* param = [environment.arguments firstObject];
         
-        environment.returnValue = @(param.integerValue + 1);
+        environment.returnValue = (__bridge void *)(@(param.integerValue + 1));
         
     }];
     
@@ -229,6 +230,60 @@
     
     //THEN
     XCTAssert([string isEqualToString:@""], @"Original variadic function should be called");
+}
+
+#pragma mark - Primitives
+-(void) testChaosForPrimitiveReturnType
+{
+    //GIVEN
+    int intValue = 11;
+    DixieBlockChaosProvider* blockProvider = [DixieBlockChaosProvider block:^(DixieBaseChaosProvider *chaosProvider, id victim, DixieCallEnvironment *environment) {
+        
+        environment.returnValue = (void *)&intValue;
+    }];
+    
+    DixieProfileEntry* entry = [DixieProfileEntry entry:[ChaosProviderTestClass class] selector:@selector(returnIntValue) chaosProvider:blockProvider];
+    
+    dixie
+    .Profile(entry)
+    .Apply();
+    
+    ChaosProviderTestClass* testObject = [ChaosProviderTestClass new];
+    
+    //WHEN
+    int returnedIntValue = [testObject returnIntValue];
+    
+    //THEN
+    XCTAssert(returnedIntValue == 11, @"New int value should be returned");
+}
+
+-(void) testChaosPrimitiveParameterIsForwarded
+{
+    //GIVEN
+    DixieBlockChaosProvider* blockProvider = [DixieBlockChaosProvider block:^(DixieBaseChaosProvider *chaosProvider, id victim, DixieCallEnvironment *environment) {
+        
+        NSNumber *newNumber = @11;
+        storeOriginal(@11, int, 11);
+        NSMutableArray *myArguments = [environment.arguments mutableCopy];
+        myArguments[0] = newNumber;
+        environment.arguments = myArguments;
+        
+        [chaosProvider forwardChaosOf:victim environment:environment to:[DixieNonChaosProvider new]];
+    }];
+    
+    DixieProfileEntry* entry = [DixieProfileEntry entry:[ChaosProviderTestClass class] selector:@selector(numberFromInteger:) chaosProvider:blockProvider];
+    
+    dixie
+    .Profile(entry)
+    .Apply();
+    
+    ChaosProviderTestClass* testObject = [ChaosProviderTestClass new];
+    
+    //WHEN
+    NSNumber *number = [testObject numberFromInteger:42];
+    
+    //THEN
+    XCTAssert([number isEqualToNumber:@11], @"New int value should be returned");
 }
 
 @end

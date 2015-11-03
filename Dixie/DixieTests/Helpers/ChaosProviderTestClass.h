@@ -18,5 +18,6 @@
 - (id)returnValue;
 -(NSNumber*) numberFromInteger:(int)integer;
 -(NSString*) variadicMethod:(id)key,... NS_REQUIRES_NIL_TERMINATION;
+-(int) returnIntValue;
 
 @end

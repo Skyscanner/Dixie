@@ -30,4 +30,9 @@
     return @"";
 }
 
+-(int)returnIntValue
+{
+    return 42;
+}
+
 @end

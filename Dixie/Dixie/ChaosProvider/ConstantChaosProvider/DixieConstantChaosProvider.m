@@ -31,7 +31,7 @@
 
 -(void) chaosImplementationFor:(id)victim environment:(DixieCallEnvironment *)environment
 {
-	environment.returnValue = self.constant;
+	environment.returnValue = (__bridge void *)(self.constant);
 }
 
 @end

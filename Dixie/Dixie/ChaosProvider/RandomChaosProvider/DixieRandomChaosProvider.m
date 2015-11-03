@@ -39,6 +39,6 @@
 
 -(void) chaosImplementationFor:(id)victim environment:(DixieCallEnvironment *)environment
 {
-    environment.returnValue = [self.paramProvider parameter];
+    environment.returnValue = (__bridge void *)([self.paramProvider parameter]);
 }
 @end

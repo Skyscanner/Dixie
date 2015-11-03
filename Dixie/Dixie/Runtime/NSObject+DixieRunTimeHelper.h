@@ -13,6 +13,12 @@
 
 @import Foundation;
 
+#define storeOriginal(object , type, original)       \
+({                                                   \
+object.originalValue = (void*)malloc(sizeof(type));  \
+((type*)object.originalValue)[0] = original;         \
+})                                                   \
+
 /**
  *  Helper category on NSObject to store the original type encoding and value if the object was converted from non-object type
  */
