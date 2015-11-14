@@ -97,6 +97,8 @@ struct Block {
     if (isType(rType, double)) return BLOCK(double);
     if (isType(rType, float)) return BLOCK(float);
     if (isType(rType, long)) return BLOCK(long);
+    if (isType(rType, short)) return BLOCK(short);
+    if (isType(rType, unsigned int)) return BLOCK(unsigned int);
     
     return BLOCK_ID;
 }

@@ -228,7 +228,6 @@
     Class testClass = [TestClass class];
     NSArray* expectedSelector = @[
                                   NSStringFromSelector(@selector(doNothing)),
-                                  NSStringFromSelector(@selector(throwException)),
                                   NSStringFromSelector(@selector(returnValue)),
                                   NSStringFromSelector(@selector(setChar:frame:))
                                   ];
@@ -277,7 +276,7 @@
     Class returnedInstanceClass = [DixieRunTimeHelper classForMethodInfo:instanceInfo];
     
     //Then
-    XCTAssert(returnedClass != returnedInstanceClass, @"Class method should ahve different target class");
+    XCTAssert(returnedClass != returnedInstanceClass, @"Class method should have different target class");
 }
 
 @end

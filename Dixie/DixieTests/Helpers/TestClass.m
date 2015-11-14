@@ -30,17 +30,12 @@
     return 42;
 }
 
-- (void)throwException
-{
-    @throw [NSException exceptionWithName:@"Test" reason:@"Arbitrary reason" userInfo:nil];
-}
-
 - (void)doNothing
 {
     
 }
 
--(void) setNumber:(int)number object:(NSNumber *)numberObj block:(BOOL(^)(void))block
+-(void) setNumber:(int)number object:(NSNumber *)numberObj block:(dispatch_block_t)block;
 {
     
 }

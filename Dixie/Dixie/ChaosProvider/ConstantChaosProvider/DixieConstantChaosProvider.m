@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and limitations under the License.
 
 #import "DixieConstantChaosProvider.h"
+#import "NSObject+DixieRunTimeHelper.h"
 
 @interface DixieConstantChaosProvider()
 
@@ -31,7 +32,17 @@
 
 -(void) chaosImplementationFor:(id)victim environment:(DixieCallEnvironment *)environment
 {
-	environment.returnValue = (__bridge void *)(self.constant);
+    if(isType(self.context.methodInfo.signature.methodReturnType, void) == NO)
+    {
+        if(isType(self.context.methodInfo.signature.methodReturnType, id) ||
+           strcmp(self.context.methodInfo.signature.methodReturnType, "@?") == 0)
+        {
+            environment.returnValue = (__bridge void *)(self.constant);
+        }
+        else{
+            environment.returnValue = [(NSObject *)self.constant originalValue];
+        }
+    }
 }
 
 @end

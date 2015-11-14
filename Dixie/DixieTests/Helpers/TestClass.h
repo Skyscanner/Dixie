@@ -20,7 +20,6 @@
 
 - (id)returnValue;
 - (int)returnIntValue;
-- (void)throwException;
 - (void)doNothing;
 
 -(void) setNumber:(int)number object:(NSNumber *)numberObj block:(dispatch_block_t)block;
