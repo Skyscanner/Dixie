@@ -137,7 +137,7 @@ Checks the parameters of the method and if one matches the value of a given `Dix
 The idea of changing an object's behaviour is not new. It is usually used in unit testing, where a component's dependencies are mocked to have a controlled, reproducible environment. In these situations there is the requirement that the target project should be _easily injectable_. If you are depending on components that are not made by you, or that are not injectable, you have to turn to different methods. To implement the theory of creating chaos/altering component behaviour in Objective-C environment, Dixie uses the technique of _Method Swizzling_. Method swizzling relies on calling special runtime methods, that require knowing the target method and its environment. Dixie takes care of handling the runtime for you, and also hides the original method environment, so you only have to focus on defining the new behaviour and can apply it quickly and simply.
 
 __Note:__ 
-* The current implementation is best at changing behaviours of methods that are expecting object as parameters and that either return `void` or object. Support for primitive types will come in the next version.
+* The current implementation is best at changing behaviours of methods on iOS simulator. Support for arm architectures will come in the next version.
 * Dixie is best for testing so, as with other similar libraries, its usage in production environments is strongly discouraged.
 
 
