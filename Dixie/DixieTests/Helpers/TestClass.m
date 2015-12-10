@@ -25,12 +25,17 @@
     return @2;
 }
 
-- (void)throwException
+- (int)returnIntValue
 {
-    @throw [NSException exceptionWithName:@"Test" reason:@"Arbitrary reason" userInfo:nil];
+    return 42;
 }
 
 - (void)doNothing
+{
+    
+}
+
+-(void) setNumber:(int)number object:(NSNumber *)numberObj block:(dispatch_block_t)block;
 {
     
 }

@@ -14,14 +14,6 @@
 #import "DixieRunTimeHelper.h"
 #import "NSObject+DixieRunTimeHelper.h"
 
-#define isType(type1, type2) (strcmp(type1, @encode(type2)) == 0)
-
-#define storeOriginal(object , type, original)       \
-({                                                   \
-object.originalValue = (void*)malloc(sizeof(type));  \
-((type*)object.originalValue)[0] = original;         \
-})                                                   \
-
 @interface NSInvocation (PrivateHack)
 - (void)invokeUsingIMP: (IMP)imp;
 @end
@@ -74,47 +66,46 @@ struct Block {
  */
 +(id) blockForSignature:(NSMethodSignature*)signature block:(DixieImplementationBlock)block
 {
+#define BLOCK_ID                                                                                        \
+    ^id(id victim, ...){                                                                                \
+        va_list args;                                                                                   \
+        va_start(args, victim);                                                                         \
+                                                                                                        \
+        NSArray* arguments = [self argumentsFor:signature originalArguments:args];                      \
+        DixieCallEnvironment* environment = [[DixieCallEnvironment alloc] initWithArguments:arguments]; \
+        block(victim, environment);                                                                     \
+        return environment.returnValue;                                                                 \
+    }
+    
+#define BLOCK(TYPE)                                                                                     \
+    ^TYPE(id victim, ...){                                                                              \
+        va_list args;                                                                                   \
+        va_start(args, victim);                                                                         \
+                                                                                                        \
+        NSArray* arguments = [self argumentsFor:signature originalArguments:args];                      \
+        DixieCallEnvironment* environment = [[DixieCallEnvironment alloc] initWithArguments:arguments]; \
+        block(victim, environment);                                                                     \
+        return *(TYPE *)environment.returnValue;                                                        \
+    }
+    
     const char* rType = signature.methodReturnType;
     
-    if (isType(rType, void))
-    {
-        return ^void(id victim, ...){ \
-            
-            va_list args;
-            va_start(args, victim);
-            
-            NSArray* arguments = [self argumentsFor:signature originalArguments:args];
-            
-            va_end(args);
-            
-            DixieCallEnvironment* environment = [[DixieCallEnvironment alloc] initWithArguments:arguments];
-            
-            block(victim, environment);
-        };
-    }
-    else
-    {
-        return ^id (id victim, ...){ \
-            
-            va_list args;
-            va_start(args, victim);
-            
-            NSArray* arguments = [self argumentsFor:signature originalArguments:args];
-            
-            va_end(args);
-            
-            DixieCallEnvironment* environment = [[DixieCallEnvironment alloc] initWithArguments:arguments];
-            
-            block(victim, environment);
-            
-            return environment.returnValue;
-        };
-    }
+    if (isType(rType, void)) return BLOCK(void);
+    if (isType(rType, BOOL)) return BLOCK(BOOL);
+    if (isType(rType, int)) return BLOCK(int);
+    if (isType(rType, char)) return BLOCK(char);
+    if (isType(rType, double)) return BLOCK(double);
+    if (isType(rType, float)) return BLOCK(float);
+    if (isType(rType, long)) return BLOCK(long);
+    if (isType(rType, short)) return BLOCK(short);
+    if (isType(rType, unsigned int)) return BLOCK(unsigned int);
+    
+    return BLOCK_ID;
 }
 
 /**
- *  Parses a variadic list into array of objects 
-    @note The current solution handles only object,selector,BOOL and char types.
+ *  Parses a variadic list into array of objects
+ @note The current solution handles only object,selector,BOOL and char types.
  *
  *  @param signature The signature to determine the type of parameters in the variadic list
  *  @param arguments The variadic list
@@ -126,6 +117,8 @@ struct Block {
     //Ignore self and _cmd
     NSInteger numberOfParameters = signature.numberOfArguments-2;
     NSMutableArray* parameters = [NSMutableArray arrayWithCapacity:numberOfParameters];
+    va_list iteratorList;
+    __va_copy(iteratorList, arguments);
     
     for (NSInteger index = 0; index < numberOfParameters; index++) {
         
@@ -133,7 +126,7 @@ struct Block {
         const char* argTyp = [signature getArgumentTypeAtIndex:index + 2];
         
         //Convert to object
-        id parameter = [self objectFromNext:arguments type:argTyp];
+        id parameter = [self objectFromNext:iteratorList type:argTyp outputArgumentList:&iteratorList];
         
         //Fill the unparsed value with NSNull
         parameter = parameter ? :[NSNull null];
@@ -151,7 +144,7 @@ struct Block {
     
     [invocation setTarget:puppet];
     [invocation setSelector:chaosContext.methodInfo.selector];
-
+    
     //We are ignoring the index of self and _cmd
     for (NSInteger i = 2; i < signature.numberOfArguments; i++) {
         
@@ -175,12 +168,20 @@ struct Block {
     }
     
     [invocation invokeUsingIMP:implementation];
-
+    
     if (!isType(chaosContext.methodInfo.signature.methodReturnType, void))
     {
-        __unsafe_unretained id returnValue;
-        [invocation getReturnValue:&returnValue];
-        environment.returnValue = returnValue;
+        if(isType(chaosContext.methodInfo.signature.methodReturnType, id))
+        {
+            id returnValue;
+            [invocation getReturnValue:&returnValue];
+            environment.returnValue = (void*)CFBridgingRetain(returnValue);
+        }
+        else
+        {
+            void *returnValue = malloc(chaosContext.methodInfo.signature.methodReturnLength);
+            environment.returnValue = returnValue;
+        }
     }
 }
 
@@ -190,11 +191,12 @@ struct Block {
  *  @note We are using core foundation factories here, NSNumber, NSString might be swizzled
  *
  *  @param arguments The variadic list
- *  @param argType   the expected type of the next item
+ *  @param argType   The expected type of the next item
+ *  @param ova_List  The current state of the variadic list after the current value is read from it
  *
  *  @return An NSObject subclass that represents the argument
  */
-+(id) objectFromNext:(va_list)arguments type:(const char*)argType
++(NSObject *) objectFromNext:(va_list)arguments type:(const char*)argType outputArgumentList:(out void *)ova_List
 {
     NSObject* object;
     
@@ -280,13 +282,13 @@ struct Block {
     }
     //Object
     else if (strcmp(argType, "@") == 0   ||//NSObject
-        strcmp(argType, "no@") == 0 || //NSObject?
-        strcmp(argType, "@?") == 0  //Block
-        )
+             strcmp(argType, "no@") == 0 || //NSObject?
+             strcmp(argType, "@?") == 0  //Block
+             )
     {
         id data = va_arg(arguments, id);
         
-        object = data;
+        object = strcmp(argType, "@?") == 0 ? [data copy] : data;
     }
     //class
     else if (isType(argType, Class))
@@ -316,6 +318,8 @@ struct Block {
     
     //Set the original encoding on the object
     [object setEncoding:[NSString stringWithUTF8String:argType]];
+    
+    ova_List = &arguments;
     
     return object;
 }

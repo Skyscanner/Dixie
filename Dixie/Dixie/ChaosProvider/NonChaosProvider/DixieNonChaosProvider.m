@@ -20,4 +20,9 @@
 	return self.context.originalIMP;
 }
 
+-(void) chaosImplementationFor:(id)victim environment:(DixieCallEnvironment *)environment
+{
+    [DixieRunTimeHelper callImplementation:self.context.originalIMP on:victim chaosContext:self.context environment:environment];
+}
+
 @end

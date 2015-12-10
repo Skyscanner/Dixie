@@ -26,7 +26,7 @@
 /**
  *  The return value of a method's implementation
  */
-@property (nonatomic) id returnValue;
+@property (nonatomic) void *returnValue;
 
 /**
  *  Creates a DixieCallEnvironment with the arguments

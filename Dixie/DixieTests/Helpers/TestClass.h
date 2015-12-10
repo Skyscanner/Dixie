@@ -19,9 +19,10 @@
 + (void)classDoNothing;
 
 - (id)returnValue;
-- (void)throwException;
+- (int)returnIntValue;
 - (void)doNothing;
 
+-(void) setNumber:(int)number object:(NSNumber *)numberObj block:(dispatch_block_t)block;
 -(void) setChar:(char)aChar frame:(CGRect)frame;
 
 @end

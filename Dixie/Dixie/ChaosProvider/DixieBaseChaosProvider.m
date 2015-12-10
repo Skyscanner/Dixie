@@ -22,13 +22,14 @@
                                                   environment:^(id victim, DixieCallEnvironment *environment) {
         
         [self chaosImplementationFor:victim environment:environment];
-        
-        [[DixieLogger defaultLogger] log:@"Puppet %@: %@ used %@ to return %@",
-         NSStringFromClass([victim class]),
-         NSStringFromSelector(self.context.methodInfo.selector),
-         [self class],
-         environment.returnValue];
-        
+        if(isType(self.context.methodInfo.signature.methodReturnType, id))
+        {
+            [[DixieLogger defaultLogger] log:@"Puppet %@: %@ used %@ to return %@",
+             NSStringFromClass([victim class]),
+             NSStringFromSelector(self.context.methodInfo.selector),
+             [self class],
+             environment.returnValue];
+        }
     }];
 }
 

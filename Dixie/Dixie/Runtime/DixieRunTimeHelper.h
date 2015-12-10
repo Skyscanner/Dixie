@@ -20,6 +20,8 @@
 
 #define DixieMethodPrefix @"dixie_"
 
+#define isType(typeEncoding, type2) (strcmp(typeEncoding, @encode(type2)) == 0)
+
 /**
  *  Block type to describe a method's concrete implementation
  *

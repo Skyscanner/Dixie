@@ -17,7 +17,7 @@
 
 @interface DixieRunTimeHelper(UnitTest)
 +(NSArray*) argumentsFor:(NSMethodSignature*)signature originalArguments:(va_list)arguments;
-+(id) objectFromNext:(va_list)arguments type:(const char*)argType;
++(id) objectFromNext:(va_list)arguments type:(const char*)argType outputArgumentList:(out void *)oVa_List;
 +(id) blockForSignature:(NSMethodSignature*)signature block:(DixieImplementationBlock)block;
 @end
 
@@ -66,7 +66,7 @@
     [DixieRunTimeHelper callImplementation:implementation on:[TestClass new] chaosContext:context environment:environment];
     
     //Then
-    XCTAssert([environment.returnValue isEqualToNumber:@2], @"IMP should be called correctly");
+    XCTAssert([(NSNumber *)environment.returnValue isEqualToNumber:@2], @"IMP should be called correctly");
 }
 
 -(void)testClassVoidImplementationIsCalled
@@ -96,7 +96,7 @@
         va_list arguments;
         va_start(arguments, encoding);
         
-        id object = [DixieRunTimeHelper objectFromNext:arguments type:encoding];
+        id object = [DixieRunTimeHelper objectFromNext:arguments type:encoding outputArgumentList:arguments];
         
         va_end(arguments);
         
@@ -143,6 +143,25 @@
     }(@"Input value:",'c', CGRectMake(0, 0, 0, 0));
 }
 
+-(void) testArgumentObjectsCretedCorrectlyForBlock
+{
+    //Given
+    NSMethodSignature* signature = [[TestClass new] methodSignatureForSelector:@selector(setNumber:object:block:)];
+    
+    //When
+    void(^block)(id,...) = [DixieRunTimeHelper blockForSignature:signature block:^(id victim, DixieCallEnvironment *environment) {
+    
+        //Then
+        XCTAssert([environment.arguments[0] intValue] == 2, @"First parameter should be an int");
+        XCTAssert([environment.arguments[1] isEqualToNumber:@2], @"Second parameter should be an int");
+        BOOL(^thirdParameter)(void) = environment.arguments[2];
+        XCTAssert(thirdParameter(), @"Third parameter should be a block");
+    }];
+    
+    //For blocks, do NOT send the selector
+    block([TestClass new],2,@2,[^{return YES;} copy]);
+}
+
 -(void) testVoidBlockReturned
 {
     //Given
@@ -167,14 +186,36 @@
     
     //When
     id(^block)(id, ...) = [DixieRunTimeHelper blockForSignature:signature block:^(id victim, DixieCallEnvironment *environment) {
-        environment.returnValue = @2;
+        environment.returnValue = (__bridge void *)(@2);
     }];
     
     //Then
     @try {
         id returnValue = block([TestClass new], @selector(returnValue));
         
-        XCTAssert([returnValue isEqualToNumber:@2], @"Correct value should be returned");
+        XCTAssert([returnValue isEqualToNumber:@2], @"Correct id value should be returned");
+    }
+    @catch (NSException *exception) {
+        XCTFail(@"Correct void block should be returned");
+    }
+}
+
+-(void) testIntReturnBlockReturned
+{
+    //Given
+    NSMethodSignature* signature = [[TestClass new] methodSignatureForSelector:@selector(returnIntValue)];
+    
+    //When
+    int intValue = 11;
+    int(^block)(id, ...) = [DixieRunTimeHelper blockForSignature:signature block:^(id victim, DixieCallEnvironment *environment) {
+        environment.returnValue = (void *)&intValue;
+    }];
+    
+    //Then
+    @try {
+        int returnValue = block([TestClass new], @selector(returnValue));
+        
+        XCTAssert(returnValue == 11, @"Correct int value should be returned");
     }
     @catch (NSException *exception) {
         XCTFail(@"Correct void block should be returned");
@@ -187,7 +228,6 @@
     Class testClass = [TestClass class];
     NSArray* expectedSelector = @[
                                   NSStringFromSelector(@selector(doNothing)),
-                                  NSStringFromSelector(@selector(throwException)),
                                   NSStringFromSelector(@selector(returnValue)),
                                   NSStringFromSelector(@selector(setChar:frame:))
                                   ];
@@ -236,7 +276,7 @@
     Class returnedInstanceClass = [DixieRunTimeHelper classForMethodInfo:instanceInfo];
     
     //Then
-    XCTAssert(returnedClass != returnedInstanceClass, @"Class method should ahve different target class");
+    XCTAssert(returnedClass != returnedInstanceClass, @"Class method should have different target class");
 }
 
 @end
